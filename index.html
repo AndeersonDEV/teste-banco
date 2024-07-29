@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <meta http-equiv="refresh" content="60">
     <script src="app/main.js" defer></script>
     <script src="app/Envio.js" defer></script>
     <script src="app/api.js" defer></script>
@@ -19,9 +20,9 @@
     <header class="cabecalho">
         <img src="assets/Logo.png" alt="logo do gpa">
         <h1>NOTA FISCAL NÃO CONSTA NO ORACLE / SIM</h1>
-        <div>
-            <label for="searchInput">Informe o CD ou Loja</label>
-            <input type="text" id="searchInput" placeholder="Digite o número">
+        <div class="cabecalho__pesquisar">
+            <input type="search" placeholder="Pesquisar Loja / CD" id="pesquisar" class="pesquisar__input" data-pesquisa>
+            <button class="pesquisar__botao" data-botao-pesquisa>
         </div>
     </header>
     <main>

@@ -40,19 +40,20 @@ function ocultarFormulario() {
     tabelaChaves.classList.remove('desativa')
 }
 
-document.getElementById('searchInput').addEventListener('keyup', function () {
-    let filter = this.value.toLowerCase();
-    let rows = document.querySelectorAll('#itemList tr');
+// document.querySelector('[data-pesquisa]').addEventListener('keyup', function () {
+//     let filter = this.value.toLowerCase();
+//     let rows = document.querySelectorAll('#itemList tr');
 
-    rows.forEach(function (row) {
-        let chave = row.querySelector('.chave').textContent.toLowerCase();
-        let status = row.querySelector('.status').textContent.toLowerCase();
-        let loja = row.querySelector('.loja').textContent.toLowerCase();
+//     rows.forEach(function (row) {
+//         let chave = row.querySelector('.chave').textContent.toLowerCase();
+//         let status = row.querySelector('.status').textContent.toLowerCase();
+//         let loja = row.querySelector('.loja').textContent.toLowerCase();
 
-        if (chave.includes(filter) || status.includes(filter) || loja.includes(filter)) {
-            row.classList.remove('hidden');
-        } else {
-            row.classList.add('hidden');
-        }
-    });
-});
+//         if (chave.includes(filter) || status.includes(filter) || loja.includes(filter)) {
+//             row.classList.remove('hidden');
+//         } else {
+//             row.classList.add('hidden');
+//         }
+//     });
+// });
+
