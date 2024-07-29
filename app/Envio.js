@@ -10,7 +10,7 @@ async function Envio() {
     formData.append('loja', JSON.stringify(valorLoja))
     formData.append('chaves', JSON.stringify(valoresChaves))
 
-    const response = await fetch('https://zany-computing-machine-r4gw56xw9756fx7q6-3000.app.github.dev/ReceberChave', {
+    const response = await fetch('https://c1c6e455-17c5-45a5-a39d-4e83ff79717c-00-2t1hvmfdaqg5q.worf.replit.dev/ReceberChave', {
         method: 'POST',
         body: formData,
     }); 1
