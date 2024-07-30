@@ -41,10 +41,10 @@ function ocultarFormulario() {
 }
 
 async function pesquisarLoja() {
-    const pesquisa = document.getElementById('pesquisaLoja').value;
+    const pesquisa = document.getElementById('pesquisaLoja').value; 
     try {
         const listaApi = await listaNotas();
-        const resultadoPesquisa = listaApi.filter(elemento => elemento.loja === pesquisa);
+        const resultadoPesquisa = listaApi.filter(elemento => elemento.loja === pesquisa1);
         lista.innerHTML = "";
         if (resultadoPesquisa.length > 0) {
             resultadoPesquisa.forEach(elemento => lista.appendChild(

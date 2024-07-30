@@ -154,7 +154,9 @@ main {
     padding: 0rem 0.4rem;
     cursor: pointer;
 }
-
+.tabela__chaves p{
+    text-align: center;
+}
 .cabecalho__tabela {
     background-color: var(--bg-secundario);
     color: #fff;
@@ -165,26 +167,34 @@ main {
     display: flex;
     justify-content: center;
 }
-/* .cabecalho div {
-    display: flex;
-    flex-direction: column;
-    color: beige;
-    font-size: 0.8rem;
 
-} */
 
 .tabela_chaves__local {
-    width: 100%;
+    width: 50vw;
     border: 0.1rem solid black;
     box-shadow: 0.1rem 0.1rem black;
     border-radius: 0.2rem;
+    
 }
 
 .tabela_chaves__local td {
-    width: 100%;
+    
     border: 1px solid var(--bg-secundario);
     color: #fff;
     text-align: center;
+    
+    
+}
+.chave{
+    width: 30vw;
+    
+    
+}
+.status{
+    display: flex;
+    width: 15vw;
+    justify-content: center;
+    
 }
 
 
