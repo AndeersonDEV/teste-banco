@@ -234,7 +234,7 @@ main {
         transform: rotate(360deg);
     }
 }
-@media screen and (min-width:390px) {
+/* @media screen and (min-width:390px) {
     .cabecalho img, .cabecalho__pesquisar {
         display: none;
     }
@@ -255,7 +255,7 @@ main {
     }
     .container img{
         width: 16rem;
-        /* align-self: flex-start; */
+        
     }
     
-}
+} */
