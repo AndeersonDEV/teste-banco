@@ -7,6 +7,9 @@ async function listaNotas() {
 
 const lista = document.querySelector("#itemList");
 function constroiCard(loja, chave, status) {
+    if (!status) {
+        status = "NÃO PROCESSADA VERIFIQUE A CHAVE INFORMADA";
+    }
     const chaveAcesso = document.createElement("tr");
     chaveAcesso.className = "itemList";
     chaveAcesso.innerHTML = `

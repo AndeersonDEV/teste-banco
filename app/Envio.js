@@ -46,3 +46,10 @@ function validateInput2(event) {
         input.value = input.value.slice(0, 44); 
     }
 }
+function validateLength(event) {
+    const input = document.getElementById('chave_acesso');
+    if (input.value.length !== 44) {
+        alert("O número da loja deve ter exatamente 44 caracteres.");
+        event.preventDefault(); // Impede o envio do formulário
+    }
+}

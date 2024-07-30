@@ -37,7 +37,7 @@
 
         <section class="form desativa">
 
-            <form action="/submit" method="post" id="formulario">
+            <form action="/submit" method="post" id="formulario" onsubmit="validateLength(event)">
                 <div class="formulario__titulo">
                     <p>DIGITE OU COLETE COM O SCANNER A CHAVE DE ACESSO</p>
                     <button type="button" onclick="ocultarFormulario()" class="btn-fechar-formulario">X</button>
@@ -49,8 +49,9 @@
                 <br>
                 <div id="emails">
                     <div class="chaves__acesso">
+                        
                         <label for="chave_acesso">Chave de Acesso:</label>
-                        <input type="number" id="chave_acesso" name="chave_acesso[]" required min="0" class="chave_acesso" oninput="validateInput2(event)">
+                        <input type="number" id="chave_acesso" pattern="\d{44}" name="chave_acesso[]" required min="0" class="chave_acesso" oninput="validateInput2(event)">
                         <button type="button" onclick="addEmailField()" class="btn-add-nova-linha">Adicionar</button>
                     </div>
                 </div>
