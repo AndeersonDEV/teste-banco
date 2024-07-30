@@ -239,7 +239,7 @@ main {
         display: none;
     }
     .cabecalho h1{
-        font-size: 0.6rem;
+        font-size: 1.5rem;
     }
     .cabecalho{
         display: flex;
@@ -255,9 +255,7 @@ main {
     }
     .container img{
         width: 16rem;
-        align-self: flex-start;
+        /* align-self: flex-start; */
     }
-    .btn-add-nova-linha{
-        margin: -11.5rem;
-    }
+    
 }
