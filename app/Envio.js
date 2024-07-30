@@ -33,3 +33,16 @@ function showLoading() {
 function hideLoading() {
     document.getElementById('loading-spinner').style.display = 'none';
 }
+function validateInput(event) {
+    const input = event.target;
+    if (input.value.length > 4) {
+        input.value = input.value.slice(0, 4); 
+    }
+}
+
+function validateInput2(event) {
+    const input = event.target;
+    if (input.value.length > 44) {
+        input.value = input.value.slice(0, 44); 
+    }
+}

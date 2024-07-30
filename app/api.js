@@ -32,19 +32,21 @@ async function listaNotasNaTela() {
 
 listaNotasNaTela();
 
-function pesquisarLoja(evento){
-    evento.preventDefault();
-    fetch('https://c1c6e455-17c5-45a5-a39d-4e83ff79717c-00-2t1hvmfdaqg5q.worf.replit.dev/Notas')
-    .then(response => response.json())
-    .then(data => {
-        const dadosDePesquisa = document.querySelector("[data-pesquisa]").value
-        const chaveParaPesquisar = "1111";
-        const resultado = data.find(item => item.loja === dadosDePesquisa);
-        console.log(resultado);
-    })
-    .catch(error => console.error('Erro:', error));
+// async function pesquisarLoja(evento){
 
-}
-const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]");
+//     evento.preventDefault();
+//     const listaApi = await listaNotas();
+//     fetch('https://c1c6e455-17c5-45a5-a39d-4e83ff79717c-00-2t1hvmfdaqg5q.worf.replit.dev/Notas')
+//     .then(response => response.json())
+//     .then(data => {
+//         const dadosDePesquisa = document.querySelector("[data-pesquisa]").value
+//         const resultado = data.find(item => item.loja === dadosDePesquisa);
+//         listaApi.forEach(elemento => resultado.appendChild(
+//             constroiCard(elemento.loja, elemento.chave, elemento.status)))
+//     })
+//     .catch(error => console.error('Erro:', error));
 
-botaoDePesquisa.addEventListener("click", evento => pesquisarLoja(evento))
+// }
+// const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]");
+
+// botaoDePesquisa.addEventListener("click", evento => pesquisarLoja(evento))
