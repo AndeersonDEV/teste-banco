@@ -8,7 +8,7 @@ async function listaNotas() {
 const lista = document.querySelector("#itemList");
 function constroiCard(loja, chave, status) {
     if (!status) {
-        status = "NÃO PROCESSADA VERIFIQUE A CHAVE INFORMADA";
+        status = "VERIFIQUE A CHAVE INFORMADA";
     }
     const chaveAcesso = document.createElement("tr");
     chaveAcesso.className = "itemList";
@@ -17,7 +17,6 @@ function constroiCard(loja, chave, status) {
     <td class="status">${status}</td>
     <td class="loja">${loja}</td>
     `
-
     return chaveAcesso;
 }
 
@@ -30,8 +29,6 @@ async function listaNotasNaTela() {
         lista.innerHTML = `<h2 class="mensagem__titulo">Não foi possível carregar a lista de chaves</h2>`
     }
 }
-
-
 
 listaNotasNaTela();
 

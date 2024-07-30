@@ -40,20 +40,21 @@ function ocultarFormulario() {
     tabelaChaves.classList.remove('desativa')
 }
 
-// document.querySelector('[data-pesquisa]').addEventListener('keyup', function () {
-//     let filter = this.value.toLowerCase();
-//     let rows = document.querySelectorAll('#itemList tr');
-
-//     rows.forEach(function (row) {
-//         let chave = row.querySelector('.chave').textContent.toLowerCase();
-//         let status = row.querySelector('.status').textContent.toLowerCase();
-//         let loja = row.querySelector('.loja').textContent.toLowerCase();
-
-//         if (chave.includes(filter) || status.includes(filter) || loja.includes(filter)) {
-//             row.classList.remove('hidden');
-//         } else {
-//             row.classList.add('hidden');
-//         }
-//     });
-// });
+async function pesquisarLoja() {
+    const pesquisa = document.getElementById('pesquisaLoja').value;
+    try {
+        const listaApi = await listaNotas();
+        const resultadoPesquisa = listaApi.filter(elemento => elemento.loja === pesquisa);
+        lista.innerHTML = "";
+        if (resultadoPesquisa.length > 0) {
+            resultadoPesquisa.forEach(elemento => lista.appendChild(
+                constroiCard(elemento.loja, elemento.chave, elemento.status)));
+        } else {
+            lista.innerHTML = `<tr><td colspan="3" class="mensagem__titulo">Nenhuma nota encontrada para a loja ${pesquisa}</td></tr>`;
+        }
+    } catch {
+        lista.innerHTML = `<tr><td colspan="3" class="mensagem__titulo">Não foi possível carregar a lista de chaves</td></tr>`;
+    }
+    
+}
 
